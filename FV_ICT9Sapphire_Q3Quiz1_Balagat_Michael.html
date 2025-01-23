@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Math Quiz</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+</head>
+<style>
+
+
+	body{
+			background-image: url('https://png.pngtree.com/background/20240814/original/pngtree-white-math-doodles-and-blurry-grey-office-photo-picture-image_10097393.jpg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			font-family: 'Audiowide';font-size: 22px;
+		}
+
+</style>
+
+<body>
+<center>
+<h1>If Computer = 50 and Phone = 10, compute for the following</h1>
+<br>
+<div class="container">
+<h2>Arithmetic Operator</h2>
+<p class="ShowAnswer" id="displayarithmetic">1. Addition: <br> 2. Exponent: </p>
+<button class="btn btn-primary btn-danger" onclick="arithmetic()">Show Answer</button>
+<br><br>
+<h2>Comparison Operator</h2>
+<p class="ShowAnswer" id="displaycomparison">1. Computer is less than Phone?: <br> 2. is Computer euqal to Phone?: </p>
+<button class="btn btn-primary btn-danger" onclick="comparison()">Show Answer</button>
+<br><br>
+<h3>Logical Operator</h3>
+<p class="ShowAnswer" id="displaylogical">1. (Computer <= Phone) && (Computer >= Phone): <br> 2. (Computer = Phone) || (Computer == Phone): </p>
+<button class="btn btn-primary btn-danger" onclick="logical()">Show Answer</button>
+</div>
+
+
+
+<script>
+
+// Michael Balagat
+// Date Submitted at 01/23/2025
+// ICT 3RD QTR Quiz#1
+
+// Arithmetic Operator Area
+	function arithmetic() 
+	{
+		let Computer = 50, Phone = 10;
+		let Addition = Computer + Phone;
+		let Exponent = Computer ** Phone;
+
+		document.getElementById("displayarithmetic").innerHTML = 
+                `1. Addition: ${Addition} <br> 2. Exponent: ${Exponent}`;
+	}
+// Comparison Operator Area
+	function comparison() 
+	{
+            let Computer = 50, Phone = 10;
+            let greater = (Computer > Phone);
+            let equal = (Computer == Phone);
+
+        document.getElementById("displaycomparison").innerHTML = 
+            `a. is Computer greater than Phone? : ${greater} <br> b. is Computer equal to Phone?: ${equal}`;
+    }
+
+// Logical Operator Area
+	function logical() 
+	{
+            let Computer = 50, Phone = 10;
+            let N = (Computer <= Phone) && (Computer >= Phone);
+            let V = (Computer != Phone) || (Computer == Phone);
+        document.getElementById("displaylogical").innerHTML = `1. (Computer <= b) && (Computer >= Phone) : ${N} <br> 2. (Computer != Phone) || (Computer == Phone): ${V}`;
+            
+    }
+
+</script>
+
+<br><br>
+
+<p>© 2025, Michael Balagat<p>
+
+</center>
+</body>
+</html>
